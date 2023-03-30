@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet/css/navbar.css') }}"> 
+
+    <style>
+      body{
+        background-color: #99E0FE;
+        background-image: linear-gradient(315deg, #99E0FE 0%, #9fd4d1 74%);
+      }
+    .subBtn{  
+    background-color: #89d8d3;
+    background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+    color: #fff;
+    font-family: Sans-serif;
+    font-size: 18px;
+    height: 40px;
+    width: 200px;
+    line-height: 8px;
+    margin: 15px 420px;
+    padding: 20px 20px;
+    text-align: center;
+    border: 5px;
+    border: solid #000000 1.2px;
+    transition: all 0.3s ease 0s;
+    margin-top: 0px;
+
+  }
+  .subBtn:hover {
+    border-radius: 20px;
+    background-color: #4dccc6;
+    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+    box-shadow:
+   -5px -5px 15px 0px #fff9,
+   -2px -2px 4px 0px #fff9,
+   5px 5px 15px 0px #0002,
+   2px 2px 4px 0px #0001;
+}
+
+  .display_video{
+    display: block;
+    position: relative;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 6px;
+    
+  }
+  .record{
+    height:auto;
+    width: 100%;
+  }
+  p{
+  font-size: 15px;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+
+
+  </style>
+
+    <div id="wrapper">
+    
+        <nav>
+          <ul>
+            <!-- <li>
+                <a href="Home.html" class="active"><img src="icons\domo.png" width="50px" height="50px"></a>
+            </li>-->
+
+            <li><a href="{{ url_for('behavior') }}">BEHAVIOR</a></li>
+            <li><a href="{{ url_for('breed') }}">BREED</a></li>
+            <li><a href="{{ url_for('gallery') }}">GALLERY</a></li>
+            <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+      <div class="display_video">
+        <img  class="record" src="{{ url_for('video') }}"/>
+        <form method="post" action="{{ url_for('recording') }}">
+          <div class="btn-toolbar justify-content-center" data-aos="fade-down-right" style="margin-top: 60px;">
+             <!--<div class="subBtn" style="text-align:center;">-->  
+        <input class="subBtn" input type="submit" value="Start/Stop Recording" name="rec"/>
+          </div>
+      </form>
+      </div>
+      </div>
+      <div>
+        
+</head>
+<body>
+
+</body>
+</html>

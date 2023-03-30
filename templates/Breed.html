@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Breed</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet/css/sidebar.css') }}">
+    <style>
+
+.back{
+    /*filter: drop-shadow(0 10px 5px black);*/
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+  }
+
+  .logo{
+    /*filter: drop-shadow(0 10px 5px black);*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin-right: 10px;
+
+  }
+
+  .subBtn{  
+    background-color:#853830;
+    background-image: linear-gradient(315deg, #853830 0%, #C6483A 74%);
+    color: #FFE6CD;
+    font-family:'Poppins', sans-serif;
+    font-size: 18px;
+    height: 40px;
+    width: 200px;
+    line-height: 8px;
+    margin: 15px 15px;
+    text-align: center;
+    border: 5px;
+    border: solid #FFE6CD 1.2px;
+    transition: all 0.3s ease 0s;
+    margin-top: 0px;
+
+  }
+  .subBtn:hover {
+    border-radius: 20px;
+    background-color: #C6483A;
+    background-image: linear-gradient(315deg, #C6483A 0%, #C6483A 74%);
+    box-shadow:
+   -5px -5px 15px 0px #fff9,
+   -2px -2px 4px 0px #fff9,
+   5px 5px 15px 0px #0002,
+   2px 2px 4px 0px #0001;
+}
+
+  .display_video{
+    display: block;
+    position: relative;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 6px;
+    
+  }
+  .record{
+    height:auto;
+    width: 100%;
+  }
+  p{
+  font-size: 15px;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+
+
+  </style>
+
+
+
+
+</head>
+<body style="background-color:#EFA554;">
+  <nav class="nav">
+      <ul class="nav__list">
+          <a href="{{ url_for('welcome') }}" class="nav__link">
+              <i class="ri-home-7-line"></i>
+              <span class="nav__name">Home</span>
+          </a> 
+
+          <a href="{{ url_for('behavior') }}" class="nav__link">
+              <i class="ri-record-circle-line"></i>
+              <span class="nav__name">Behavior</span>
+          </a>  
+
+          <a href="{{ url_for('breed') }}" class="nav__link">
+              <i class="ri-record-circle-fill"></i>
+              <span class="nav__name">Breed</span>
+          </a> 
+
+          <a href="{{ url_for('gallery') }}" class="nav__link">
+              <i class="ri-gallery-fill"></i>
+              <span class="nav__name">Gallery</span>
+          </a> 
+
+          <a href="{{ url_for('about') }}" class="nav__link">
+              <i class="ri-information-line"></i>
+              <span class="nav__name">About</span>
+          </a> 
+      </ul>
+
+      <!--shapes-->
+      <div class="nav__circle-1"></div>
+      <div class="nav__circle-2"></div>
+
+      <div class="nav__square-1"></div>
+      <div class="nav__square-2"></div>
+
+
+  </nav>
+<main>
+
+  <div class="logo">
+    <img src="{{url_for('static', filename='stylesheet/domo1.png')}}"> 
+  </div>
+    
+</div>
+<div class="display_video">
+  <img  class="record" src="{{ url_for('breedvideo') }}"/>
+  <form method="post" action="{{ url_for('breedrecording') }}">
+    <div class="btn-toolbar justify-content-center" data-aos="fade-down-right" style=" text-align:center;">
+       <!--<div class="subBtn" style="text-align:center;">-->  
+  <input class="subBtn" input type="submit" value="Start/Stop Recording" name="rec"/>
+    </div>
+  </form>
+  </div>
+  </div>
+  <div>
+  </main>
+
+    <script src="{{ url_for('static', filename='stylesheet/js/sidebar.js') }}"></script>
+</body>
+</html>

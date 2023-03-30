@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Camera App/static/stylesheet/css/welcome.css') }}">
+
+    <style>
+  
+  :root {
+    --primary-color: #FFE6CD;
+  }
+  
+  * {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Space Mono';
+    background-size:cover;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  h3{
+   /* letter-spacing: 8px;*/
+    font-family: 'Space Mono';
+    position: absolute;
+    font-size: 30px;
+    color:#FFE6CD;
+   /* text-shadow: 2px 2px 5px #3336;*/
+    top: 48%;
+    left: 12%;
+  }
+  p{
+    font-family: 'Space Mono';
+    position: absolute;
+    font-size: 20px;
+    color:#FFE6CD;
+   /* text-shadow: 2px 2px 5px #3336;*/
+    top: 52%;
+    left: 12%;
+  }
+
+  .logo{
+    /*filter: drop-shadow(0 10px 5px black);*/
+    position: absolute;
+    top: 30%;
+    left: 11%;
+
+  }
+  
+/*  .showcase {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFE6CD;
+    padding: 0 20px;
+  }
+*/
+  .btn {
+  background-color: #853830;
+  border: none;
+  z-index: 1;
+  padding: 15px 35px;
+  border-radius: 10px;
+  border: solid #FFE6CD 1.2px;
+  margin-top: 10px;
+  position: fixed;
+  bottom: 15%;
+  right: 10%;
+}
+.btn:hover {
+  color: #FFE6CD;
+}
+/*
+.btn:active {
+  top: 2px;
+}
+*/
+
+    </style>
+  
+  </head>
+  <body background="{{ url_for('static', filename='stylesheet/bg1.png') }}">
+   
+
+            <div class="logo">
+              <img src="{{url_for('static', filename='stylesheet/domo.png')}}"> 
+            </div>
+              
+            <h3>DOG MONITORING SYSTEM</h3> 
+            <p>"Secure your pup, worry free!"</p> 
+              
+            <div>
+                <a href="{{ url_for('behavior') }}"  class="btn">Click to continue</a>
+            </div>
+          
+          
+
+  </body>
+</html>

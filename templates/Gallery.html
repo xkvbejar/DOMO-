@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Responsive Video Playlist Tutorial</title>
+
+   <!-- custom css file link  -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet/css/sidebar.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet/css/sstyle.css') }}">
+
+</head>
+<body style="background-color:#EFA554;">
+   <nav class="nav">
+      <ul class="nav__list">
+          <a href="{{ url_for('welcome') }}" class="nav__link">
+              <i class="ri-home-7-line"></i>
+              <span class="nav__name">Home</span>
+          </a> 
+
+          <a href="{{ url_for('behavior') }}" class="nav__link">
+              <i class="ri-record-circle-line"></i>
+              <span class="nav__name">Behavior</span>
+          </a>  
+
+          <a href="{{ url_for('breed') }}" class="nav__link">
+              <i class="ri-record-circle-fill"></i>
+              <span class="nav__name">Breed</span>
+          </a> 
+
+          <a href="{{ url_for('gallery') }}" class="nav__link">
+              <i class="ri-gallery-fill"></i>
+              <span class="nav__name">Gallery</span>
+          </a> 
+
+          <a href="{{ url_for('about') }}" class="nav__link">
+              <i class="ri-information-line"></i>
+              <span class="nav__name">About</span>
+          </a> 
+      </ul>
+
+      <!--shapes-->
+      <div class="nav__circle-1"></div>
+      <div class="nav__circle-2"></div>
+
+      <div class="nav__square-1"></div>
+      <div class="nav__square-2"></div>
+
+
+    </nav>
+
+    <div class="logo">
+        <img src="{{url_for('static', filename='stylesheet/domo1.png')}}"> 
+      </div>
+
+<div class="container">
+
+   <div class="main-video-container">
+      <video src = "{{ url_for('static', filename=imagelist)}}" alt="" type="video/mp4" loop controls autoplay class="main-video"></video>
+      <h3 class="main-vid-title"></h3>
+   </div>
+
+   <div class="video-list-container">
+      {% for imagelist in imagelist %}
+      <div class="list active">
+         <video src="{{ url_for('static', filename=imagelist)}}" type="video/mp4" class="list-video"></video>
+         <h3 class="list-title">{{imagelist}}</h3>
+      </div>
+      {% endfor %}
+   </div>
+
+</div>
+
+<!-- custom js file link  -->
+<script src="{{ url_for('static', filename='stylesheet/js/sscript.js') }}"></script>
+<script src="{{ url_for('static', filename='stylesheet/js/sidebar.js') }}"></script>
+
+</body>
+</html>
