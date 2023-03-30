@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #fff;
+	font-family: sans-serif, Arial, Helvetica;
+	pointer-events: none;
+}
+
+.number {
+	font-family: 'Squada One', cursive;
+	font-size: 80px;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: #111;
+}
+
+.clock {
+	padding: 7px;
+	border-radius: 5px;
+	box-shadow: inset 0 0 7px #444;
+	background: #000;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.preloader {
+	width: 100%;
+	height: 100%;
+	background: #000;
+	position: absolute;
+	border-radius: 5px;
+}
+
+.days {
+	list-style: none;
+	display: flex;
+}
+
+.days li {
+	margin: 10px;
+}
+
+.days li.actual {
+	text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+
+.numbers {
+	display: flex;
+	margin-top: 20px;
+}
+
+.date {
+	position: absolute;
+	display: flex;
+	bottom: 10px;
+	right: 10px;
+	opacity: 0.7;
+}
+
+.date * {
+	font-size: 15px;
+}

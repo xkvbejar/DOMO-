@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+  --primary-color: #3a4052;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Mono', 'SpaceMono-regular';
+  line-height: 1.5;
+  font-style: bold;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.showcase {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFE6CD;
+  padding: 0 20px;
+  font-style: bold;
+}
